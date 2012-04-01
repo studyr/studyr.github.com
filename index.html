@@ -41,9 +41,14 @@
 		  <li class="active"><a href="#">Features</a></li>
 		  <li><a href="#">FAQ</a></li>
 		</ul>
-		<ul class="pull-right nav">
-		  <li><a href="mailto:hello@studyr.net">Contact us</a></li>
-		</ul>
+		<span class="pull-right">
+		  <a href="#"><img src="img/google_play.png" /></a>
+		</span>
+		<span class="pull-right">
+	       	  <ul class="nav">
+	       	    <li><a href="mailto:hello@studyr.net">Contact us</a></li>
+		  </ul>
+		</span>
               </div><!-- /.nav-collapse -->
 	    </div>
 	  </div><!-- /navbar-inner -->
@@ -53,12 +58,10 @@
 
     <div class="container">
 
-      <section id="slider">
+      <div id="slider">
 	<input checked type="radio" name="slider" id="slide1" />
 	<input type="radio" name="slider" id="slide2" />
 	<input type="radio" name="slider" id="slide3" />
-	<input type="radio" name="slider" id="slide4" />
-	<input type="radio" name="slider" id="slide5" />
 	<div id="slides">
 	  <div id="overflow">
 	    <div class="inner">
@@ -74,12 +77,12 @@
 	    </div>
 	  </div>
 	</div>
-	<div id="controls">
+	<div id="active">
 	  <label for="slide1"></label>
 	  <label for="slide2"></label>
 	  <label for="slide3"></label>
 	</div>
-      </section>
+      </div>
       <div class="row">
 	<div class="span4">
 	  <h2><img src="img/icons/glyphicons_266_flag.png" />&nbsp; Important stuff, together</h2>
@@ -101,7 +104,7 @@
 	   ================================================== -->
       <footer class="footer">
 	<br>
-        <p>&copy; John Grosen 2012 <a href="http://twitter.com/#!/jmgrosen">@</a> <a href="#">+</a> <span class="pull-right">icons by glyphicons.com</span></p>
+        <p>&copy; <a href="http://johngrosen.com">John Grosen</a> 2012<span class="pull-right">icons by glyphicons.com</span></p>
       </footer>
 
     </div><!-- /container -->
@@ -113,7 +116,35 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/iosLabelFix.js"></script>
+    <script>
+var currentSlide = 1;
+function slide() {
+    if ($("#slide"+currentSlide).attr("checked")) {
+	currentSlide++;
+	if (currentSlide == 4) {
+	    currentSlide = 1;
+	}
+	$("#slide"+currentSlide).attr("checked", true);
+	setTimeout(slide, 5000);
+    }
+}
+setTimeout(slide, 5000)
+function justResized() { 
 
+//$("#active").css("margin-top", $("#slider").height()*-0.2 + "px");
+console.log($("#slider").height()*-0.2 + "px");
+console.log($("#slider").css("height"));
 
+$("#slider").height($(".inner article").height());
+$("#slides").height($("#slider").height());
+}
+function onFoo() {
+setTimeout(justResized, 500);
+}
+$(onFoo);
+$(window).resize(justResized);
+
+</script>
   </body>
 </html>
