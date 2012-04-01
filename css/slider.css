@@ -85,7 +85,7 @@ article {
         transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
 }
 
-#slider, #active, #active label, #slides, .navbar .navbar-inner .container {
+#active, #active label, #slides, .navbar .navbar-inner .container {
 	-webkit-transform: translateZ(0);
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;

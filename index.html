@@ -133,16 +133,13 @@ setTimeout(slide, 5000)
 function justResized() { 
 
 //$("#active").css("margin-top", $("#slider").height()*-0.2 + "px");
-console.log($("#slider").height()*-0.2 + "px");
-console.log($("#slider").css("height"));
+//console.log($("#slider").height()*-0.2 + "px");
+console.log($(".inner article").height());
 
 $("#slider").height($(".inner article").height());
 $("#slides").height($("#slider").height());
 }
-function onFoo() {
-setTimeout(justResized, 500);
-}
-$(onFoo);
+$(justResized);
 $(window).resize(justResized);
 
 </script>
