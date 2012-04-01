@@ -111,12 +111,12 @@ article {
 
 #active label:hover {
     background: #ccc;
-    border-color: #777 !important;
+    border-color: #777;
 }
 
 #slide1:checked ~ #active label:nth-child(1),
 #slide2:checked ~ #active label:nth-child(2),
-#slide3.checked ~ #active label:nth-child(3) {
+#slide3:checked ~ #active label:nth-child(3) {
     background: #333;
     border-color: #333 !important;
 }
