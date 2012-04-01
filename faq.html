@@ -35,11 +35,11 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
               </a>
-              <a class="brand" href="#">Studyr</a>
+              <a class="brand" href="/">Studyr</a>
               <div class="nav-collapse">
 		<ul class="nav">
-		  <li class="active"><a href="#">Features</a></li>
-		  <li><a href="faq.html">FAQ</a></li>
+		  <li><a href="/">Features</a></li>
+		  <li class="active"><a href="#">FAQ</a></li>
 		</ul>
 		<span class="pull-right">
 		  <a href="#"><img src="img/google_play.png" /></a>
@@ -58,43 +58,17 @@
 
     <div class="container">
 
-      <div id="slider">
-	<input checked type="radio" name="slider" id="slide1" />
-	<input type="radio" name="slider" id="slide2" />
-	<input type="radio" name="slider" id="slide3" />
-	<div id="slides">
-	  <div id="overflow">
-	    <div class="inner">
-	      <article>
-		<img src="img/slide1.png" />
-	      </article>
-	      <article>
-		<img src="img/slide2.png" />
-	      </article>
-	      <article>
-		<img src="img/slide3.png" />
-	      </article>
-	    </div>
-	  </div>
-	</div>
-	<div id="active">
-	  <label for="slide1"></label>
-	  <label for="slide2"></label>
-	  <label for="slide3"></label>
-	</div>
-      </div>
       <div class="row">
-	<div class="span4">
-	  <h2><img src="img/icons/glyphicons_266_flag.png" />&nbsp; Important stuff, together</h2>
-	  <p style="text-align: justify;">Manage your assignments and lectures in an eye-friendly list including its class, time remaining, and importance. Never again forget your homework!</p>
+	<div class="span9">
+	  <h3><strong>Why is Studyr better than the other student planner apps on Google Play&trade;?</strong></h3>
+	  <p>BECAUSE I SAID SO. But in all actuality, the main thing going for Studyr is its ease of use and eye-pleasing UI. And the fact that it's my only app and will be updated until the end of time.</p>
+	  <h3><strong>...so you want me to install an app based on its UI and "future" features?</strong></h3>
+	  <p>Pretty much. See the face to the right --></p>
+          <h3><strong>Remind me again why I would bother getting it now.</strong></h3>
+	  <p>Will saying "please" do it? But really, don't you want to look like a modern Android and not some iPhone app knockoff? Embrace the platform! (<a href="http://www.engadget.com/2012/03/31/flurrys-analytics-apple-app-store-amazon-appstore-android-google-play/">and the developers...</a>)</p>
 	</div>
-	<div class="span4">
-	  <h2><img src="img/icons/glyphicons_051_eye_open.png" /> The perfect UX</h2>
-	  <p style="text-align: justify;">With a UI closely following the Android Design guidelines, even if you have a phone running Android 2.1, you'll still experience the cleanliness of an Ice Cream Sandwich-designed app.</p>
-	</div>
-	<div class="span4">
-	  <h2><img src="img/icons/glyphicons_009_magic.png" /> Easy to use</h2>
-	  <p style="text-align: justify;">The design being based on official Google apps, Studyr is easy to learn -- you'll get the hang of it as soon as you install it.</p>
+	<div class="span3">
+	  <h1 style="font-size: 1500%;"><br><br><strong>^.^</strong></h1>
 	</div>
       </div>
 
@@ -116,32 +90,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/iosLabelFix.js"></script>
-    <script>
-var currentSlide = 1;
-function slide() {
-    if ($("#slide"+currentSlide).attr("checked")) {
-	currentSlide++;
-	if (currentSlide == 4) {
-	    currentSlide = 1;
-	}
-	$("#slide"+currentSlide).attr("checked", true);
-	setTimeout(slide, 5000);
-    }
-}
-setTimeout(slide, 5000)
-function justResized() { 
-
-//$("#active").css("margin-top", $("#slider").height()*-0.2 + "px");
-//console.log($("#slider").height()*-0.2 + "px");
-console.log($(".inner article").height());
-
-$("#slider").height($(".inner article").height());
-$("#slides").height($("#slider").height());
-}
-$(justResized);
-$(window).resize(justResized);
-
-</script>
   </body>
 </html>
