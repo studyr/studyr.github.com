@@ -106,8 +106,35 @@
 	  <p style="text-align: justify;">With a UI closely following the Android Design guidelines, even if you have a phone running Android 2.1, you'll still experience the cleanliness of an Ice Cream Sandwich-designed app.</p>
 	</div>
 	<div class="span4">
-	  <h2><img src="img/icons/glyphicons_009_magic.png" /> Easy to use</h2>
-	  <p style="text-align: justify;">The design being based on official Google apps, Studyr is easy to learn -- you'll get the hang of it as soon as you install it.</p>
+	  <h2><img src="img/icons/glyphicons_322_twitter.png" /> Follow us on Twitter</h2>
+	  <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 2,
+  interval: 30000,
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#33b6e5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('StudyrApp').start();
+</script>
 	</div>
       </div>
 
